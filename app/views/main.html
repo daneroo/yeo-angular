@@ -7,3 +7,35 @@
   <p>installed.</p>
   <h3>Enjoy coding! - Yeoman</h3>
 </div>
+
+<h4>{{ gridWatch.stamp}}</h4>
+<div class="well">
+    <h4>Power Generated</h4>
+    <div>
+        <span>{{gridWatch.power.value}}</span> 
+        <span>{{gridWatch.power.units}}</span>
+    </div>
+    <div>{{gridWatch.power.level}}</div>
+</div>    
+<div class="well">
+    <h4>Emmisions</h4>
+    <div>
+        <span>{{gridWatch.emissions.value}}</span> 
+        <span>{{gridWatch.emissions.units}}</span>
+    </div>
+    <div class="progress">
+      <div class="bar bar-success" style="width: 35%;"></div>
+      <div class="bar bar-warning" style="width: 20%;"></div>
+      <div class="bar bar-danger" style="width: 10%;"></div>
+    </div>
+</div>
+
+<ul class="nav nav-list">
+  <li class="nav-header">Power By Type</li>
+  <!-- <li class="active"><a href="#">Home</a></li> -->
+  <li ng-repeat="type in gridWatch.powerByType">
+      <a href="#">{{type.kind}} | {{type.power}} MV <i class="icon-chevron-right"></i>
+      </a>
+  </li>
+  
+</ul>
