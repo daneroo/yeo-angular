@@ -8,8 +8,8 @@ var yeoAngularApp = angular.module('yeoAngularApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/plants/:source', {
-        templateUrl: 'partials/phone-detail.html', 
+      .when('/plants/:sourceId', {
+        templateUrl: 'views/source.html', 
         controller: 'SourceCtrl'
       })
       .otherwise({

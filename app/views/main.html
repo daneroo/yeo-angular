@@ -31,26 +31,9 @@
     </thead>
     <tbody>
         <tr ng-repeat="type in gridWatch.powerByType">
-            <td>{{type.kind}}</td>
+            <td>{{type.name}}</td>
             <td>{{type.power}}</td>
-            <td><i class="icon-chevron-right"></i></td>
-        </tr>
-    </tbody>
-</table>
-
-<table class="table table-bordered table-condensed">
-    <thead>
-        <tr class="success">
-            <th>Power Plant</th>
-            <th>Output</th>
-            <th>Capacity</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="plant in gridWatch.powerByPlant.nuclear">
-            <td>{{plant.name}}</td>
-            <td>{{plant.output}}</td>
-            <td>{{plant.capacity}}</td>
+            <td><a href="#/plants/{{type.name}}"> details<i class="icon-chevron-right"></i></a></td>
         </tr>
     </tbody>
 </table>
